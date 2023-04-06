@@ -10,11 +10,11 @@ const openai = new OpenAIApi(configuration);
 module.exports = openai;
 
 const bot = new Telegraf(process.env.TG_API);
-bot.start((ctx) => ctx.reply("Welcome , You can ask anything from me"));
+bot.start((ctx) => ctx.reply("✨Bienvenido✨ , Puedes preguntarme cualquier cosa /help para ver la lista de comandos.🤖"));
 
 bot.help((ctx) => {
   ctx.reply(
-    "This bot can perform the following command \n /image -> to create image from text \n /ask -> ank anything from me "
+    "Este bot puede ejecutar el siguiente comando \n /image -> para crear una imagen a partir de texto \n /ask -> para preguntarme cualquier cosa "
   );
 });
 
